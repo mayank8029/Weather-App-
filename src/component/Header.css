@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+
+   
+
+
+
+.inputData{
+
+background-color: rgb(228, 227, 226);
+min-height: 10vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.inputField{
+    height: 2rem;
+    width: 30%;
+    margin-right: 1rem;
+}
+
+.btn-search{
+    border: 1px solid whitesmoke;
+    padding: 0.8rem;
+    cursor: pointer;
+
+}
+
+
+.mainContainer{
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.place{
+    margin: 3rem;
+    font-size: 5rem;
+    font-weight: 600;
+
+}
+
+.temprature{
+    font-size: 3rem;
+    font-weight: 350;
+}
+
+.temperatureVariation{
+    margin-top: 0.7rem ;
+}
