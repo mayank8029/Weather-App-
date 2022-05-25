@@ -5,9 +5,19 @@ const Header= () => {
   const [city,setCity]=useState(null);
   const [search, setSearch]= useState("Mumbai")
 
+  var myPlace ='';
+function handelSubmit(event){
+event.preventDefault()
+  setSearch(myPlace);
+} 
+
+
+
+
   
   useEffect(() => {
       
+    
       
 
     const fetchApi = async ()=>{
@@ -31,15 +41,16 @@ const Header= () => {
 
     fetchApi();
   
-})
+},[search])
 
   return (
     <div className='headerContainer'>
-    
+    <form onSubmit={handelSubmit}>
     <div className='inputData'>
     
-    <input type='search' className='inputField'  onChange={(event)=>{setSearch(event.target.value)}}/><button className='btn-search' >search</button>
+    <input type='search' className='inputField'  onChange={(event)=>(myPlace=event.target.value)}/><button className='btn-search'  >search</button>
     </div>
+    </form>
     
     {!city ?(
       <p> No Data Found</p>
